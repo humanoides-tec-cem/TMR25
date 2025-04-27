@@ -1,4 +1,4 @@
-# SOFTWARE DE LA NUC
+# SOFTWARE DE LA RASPBERRY PI4
 
 1) Ubuntu 24.01 
 2) ROS2 Jassic Jalisco
