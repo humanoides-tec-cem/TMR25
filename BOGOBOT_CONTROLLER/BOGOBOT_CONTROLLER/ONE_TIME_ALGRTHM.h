@@ -76,11 +76,11 @@ void Stand_Up_FaceDown(dynamixel::PortHandler *portHandler, dynamixel::PacketHan
 //  ------------------------------- P O S E S       P A R A R       P A T E A R      P E L O T A      C / D E R  E C H A--------------------------------------------------------
 //                                        0001  0002  0003  0004  0005  0006  0007  0008  0009  0010  0011  0012  0013  0014  0015  0016  0017  0018
 //                                     <---RA----LA----RA----LA----RA----LA-||-RL----LL----RL----LL---RL-----LL---RL----LL-----RR----LL----RL
-double pose_patea_1[20]                 ={2053, 2066, 997, 3055, 2055, 2045, 1801, 1830, 2322, 2197, 2275, 1653, 1552, 2741, 1757, 2378, 2367, 2208, 3,10};
-double pose_patea_2[20]                 ={2053, 2066, 997, 3055, 2055, 2045, 1801, 1830, 2219, 2181, 2380, 1660, 1237, 2764, 1512, 2247, 2205, 2161, 3,10};
-double pose_patea_3[20]                 ={2021, 2061, 1421, 2651, 2096, 2012, 1762, 1772, 2438, 2238, 2596, 1718,  594, 2915, 1357, 2562, 2194, 2294, 4,10};  
-double pose_patea_4[20]                 ={2021, 2061, 1421, 2651, 2096, 2012, 1734, 1772, 2415, 2238, 3031, 1718, 686, 2900, 1851, 2549, 1986, 2290, 1,10};  
-double pose_patea_5[20]                 ={2021, 2061, 1421, 2651, 2096, 2012, 1762, 1772, 2438, 2238, 2596, 1718,  594, 2915, 1357, 2559, 2207, 2269, 1,10}; //es la 2 otra vez pero mas rapido
+double pose_patea_1[20]                 ={2060, 2060, 997, 3055, 2055, 2045, 1801, 1830, 2322, 2197, 2275, 1653, 1552, 2793, 1757, 2378, 2367, 2208, 3,10}; //recarga su peso en la pierna izquierda
+double pose_patea_3[20]                 ={2060, 2060, 1421, 2651, 2096, 2012, 1762, 1772, 2438, 2238, 2596, 1450, 594, 2967, 1357, 2450, 2194, 2294,  4,10}; // se balancea sobre el pie izquierdo
+double pose_patea_4[20]                 ={2060, 2060, 1421, 2651, 2096, 2012, 1734, 1772, 2415, 2238, 3031, 1450, 1200, 2967, 2250, 2350, 1986, 2294, 1,10};  
+double pose_patea_5[20]                 ={2060, 2060, 1421, 2651, 2096, 2012, 1762, 1772, 2438, 2238, 2596, 1450, 594, 2967, 1357, 2450, 2194, 2294, 1,10}; //es la 3 otra vez pero mas rapido
+double pose_patea_6[20]                 ={2060, 2060, 1421, 2651, 2096, 2012, 1763, 1723, 2520, 2260, 2780, 1516, 900, 2968, 1553, 2466, 2224, 2335, 2,10};
 
 
 void kick_der(dynamixel::PortHandler *portHandler, dynamixel::PacketHandler *packetHandler,
@@ -88,10 +88,10 @@ void kick_der(dynamixel::PortHandler *portHandler, dynamixel::PacketHandler *pac
                    double IDs[18]){
   //--------------------------------- P O S E S       P A R A R         P A T E A R     C O N     D E R E C H A------------------------------------------------------------
   moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_1);
-  moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_2);  
   moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_3);
   moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_4);
   moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_5);
+  moveRobot_byQVals(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,pose_patea_6);
   moveRobot_byPose(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,p2);
 }
 
